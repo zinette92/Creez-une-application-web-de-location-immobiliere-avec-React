@@ -13,16 +13,10 @@ export default function Header() {
           alt="Logo de l'entreprise Kasa"
         />
         <div>
-        <NavLink
-  to="/"
-  className="navbar__link"
->
+          <NavLink to="/" className="navbar__link">
             Accueil
           </NavLink>
-          <NavLink
-  to="/about"
-  className="navbar__link"
->
+          <NavLink to="/about" className="navbar__link">
             A propos
           </NavLink>
         </div>

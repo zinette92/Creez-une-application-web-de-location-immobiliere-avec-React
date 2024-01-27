@@ -1,16 +1,6 @@
-$navbar-text-color: #ff6060;
-$navbar-logo-size: 150px;
-$navbar-logo-size-mobile: 120px;
-$navbar-text-size: 1.3rem;
-$navbar-text-size-mobile: 1rem;
+$link-text-color: black;
 $error-text-color: #ff6060;
-$footer-height: 110px;
-$footer-height-mobile: 140px;
 $footer-background-color: black;
-$footer-logo-size: 90px;
-$footer-logo-size-mobile: 100px;
-$footer-text-size: 1rem;
-$footer-text-size-mobile: 0.7rem;
 $footer-text-color: white;
 
 body {
@@ -43,29 +33,27 @@ code {
   }
 
   &__logo {
-    width: $navbar-logo-size;
+    width: 150px;
     height: auto;
     @media (max-width: 600px) {
-      width: $navbar-logo-size-mobile;
+      width: 120px;
     }
   }
 
   &__link {
     margin: 20px;
     text-decoration: none;
-    color: $navbar-text-color;
-    font-size: $navbar-text-size;
+    color: $link-text-color;
+    font-size: 1.3rem;
     @media (max-width: 600px) {
       margin: 10px;
-      font-size: $navbar-text-size-mobile;
+      font-size: 1rem;
     }
 
     &.active {
       text-decoration: underline;
     }
   }
-
-  
 }
 
 .error {
@@ -88,7 +76,7 @@ code {
       font-size: 6rem;
     }
   }
-  
+
   &__message {
     margin: 0;
     padding: 0;
@@ -101,10 +89,10 @@ code {
       text-align: center;
     }
   }
-  
+
   &__backToHome {
     font-size: 1rem;
-    color: $error-text-color;
+    color: $link-text-color;
 
     @media (max-width: 600px) {
       font-size: 0.8rem;
@@ -112,16 +100,14 @@ code {
   }
 }
 
-
-
 .footer {
   width: 100%;
-  height: $footer-height;
+  height: 110px;
   background-color: $footer-background-color;
   display: flex;
   justify-content: center;
   @media (max-width: 600px) {
-    height: $footer-height-mobile;
+    height: 140px;
   }
 
   &__elements {
@@ -135,18 +121,18 @@ code {
   }
 
   &__logo {
-    width: $footer-logo-size;
+    width: 90px;
     margin-top: 20px;
     height: auto;
   }
 
   &__copyright {
     color: $footer-text-color;
-    font-size: $footer-text-size;
+    font-size: 1rem;
     @media (max-width: 600px) {
       width: 60%;
       text-align: center;
-      font-size: $footer-text-size-mobile;
+      font-size: 0.7rem;
     }
   }
 }
