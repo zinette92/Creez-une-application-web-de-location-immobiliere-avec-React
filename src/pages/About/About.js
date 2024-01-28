@@ -1,9 +1,9 @@
 import React from "react";
+import Banner from "../../components/Banner/Banner";
+import banner_about_menu from "../../assets/banner_about_menu.png";
 
 export default function About() {
   return (
-    <div>
-      <h1>A propos</h1>
-    </div>
+      <Banner bannerImage={ banner_about_menu }/>
   );
 }
