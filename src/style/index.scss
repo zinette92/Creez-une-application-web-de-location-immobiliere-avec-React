@@ -154,20 +154,20 @@ code {
 
 .footer {
   width: 100%;
-  height: 110px;
-  background-color: $footer-background-color;
+  margin-top: 15px;
   display: flex;
   justify-content: center;
-  @media (max-width: 600px) {
-    height: 140px;
-  }
+  background-color: $footer-background-color;
 
   &__elements {
+    height: 150px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    background-color: $footer-background-color;
     @media (max-width: 600px) {
+      height: 140px;
       justify-content: center;
     }
   }
@@ -176,6 +176,9 @@ code {
     width: 90px;
     margin-top: 20px;
     height: auto;
+    @media (max-width: 600px) {
+      margin-bottom: 10px;
+    }
   }
 
   &__copyright {
@@ -190,22 +193,43 @@ code {
 }
 
 
+.card__frame {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0 30px;
+  @media (max-width: 600px) {
+    margin: 0 15px;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
 .card__logement {
   width: 340px;
   height: 340px;
-  margin: 30px;
-  border-radius: 15px;;
-  background-color: #ff6060;
+  margin-top: 10px;
+  border-radius: 15px;
   position: relative;
+  @media (max-width: 600px) {
+  width: 100%;
+  height: 255px;
+  margin-top: 15px;
+  }
   
+}
+
+.card__logement--cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 .card__logement--title {
   color: white;
-  width: 50%;
+  width: 75%;
   position: absolute;
-  bottom: 10%;
-  left: 10%;
-  transform: translate(-10%, -10%);
+  bottom: 0;
+  left: 5%;
 }
