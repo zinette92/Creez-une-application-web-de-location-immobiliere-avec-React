@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "../../style/index.scss";
-import logo_kasa_header from "../../assets/logo_kasa_header.png";
+import logo_kasa_header from "../../assets/images/logo_kasa_header.png";
 
 export default function Header() {
   return (

@@ -1,9 +1,19 @@
 import React from "react";
 import Banner from "../../components/Banner/Banner";
-import banner_about_menu from "../../assets/banner_about_menu.png";
+import banner_about_menu from "../../assets/images/banner_about_menu.png";
+import Collapse from "../../components/Collapse/Collapse";
 
 export default function About() {
   return (
-      <Banner bannerImage={ banner_about_menu }/>
+    <div className="about">
+      <Banner bannerImage={banner_about_menu} />
+
+      <div className="about__collapse">
+        <Collapse title={"Test"} description={"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."} />
+        <Collapse title={"Test2"} description={"La description"} />
+        <Collapse title={"Test3"} description={"La description"} />
+        <Collapse title={"Test4"} description={"La description"} />
+      </div>
+    </div>
   );
 }

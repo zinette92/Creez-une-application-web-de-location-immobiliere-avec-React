@@ -1,6 +1,6 @@
 import React from "react";
 import "../../style/index.scss";
-import logo_kasa_footer from "../../assets/logo_kasa_footer.png";
+import logo_kasa_footer from "../../assets/images/logo_kasa_footer.png";
 
 export default function Footer() {
   return (
