@@ -22,7 +22,7 @@ export default function Collapse({ title, description }) {
          
     <div className="collapse">
         <div className="collapse__header"> 
-        <h2 className="collapse__header--title"> {title}</h2>
+        <h3 className="collapse__header--title"> {title}</h3>
         <img className={`collapse__header--toggle ${isCollapseOpen ? "collapse__open" : "collapse__close"}`} src={collapse_arrow} alt="Collapse arrow" onClick={ setCollapseState }/>
         </div>
         <div className={`collapse__content ${isCollapseOpen ? "collapse__content--open" : "collapse__content--close"}`}>

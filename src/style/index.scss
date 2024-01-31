@@ -116,8 +116,9 @@ code {
 .about {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  flex-grow: 1;
 
   &__collapse {
     width: 80%;
@@ -125,6 +126,11 @@ code {
     flex-direction: column;
     margin: 15px 0;
     gap: 30px;
+
+    @media (max-width: 600px) {
+      width: calc(100% - 50px);
+    }
+
   }
 }
 
@@ -144,6 +150,7 @@ code {
   }
 
   &__header {
+    height: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -151,9 +158,13 @@ code {
     border-radius: 10px;
     z-index: 1;
 
+    @media (max-width: 600px) {
+      height: 40px;
+    }
+
     &--title {
       color: white;
-      margin-left: 5px;
+      margin-left: 10px;
     }
 
     &--toggle {
@@ -178,8 +189,13 @@ code {
     }
 
     &--description {
+      font-size: 1.2rem;
       margin: 25px;
       transition: transform 0.3s ease;
+
+      @media (max-width: 600px) {
+        font-size: 0.8rem;
+      }
     }
 
     &--descriptionClose {
