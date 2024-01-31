@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
 import React from 'react';
 
 export default function Banner({bannerImage, bannerText, bannerShadow, textBorder}) {
