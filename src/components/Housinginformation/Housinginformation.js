@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom'
 import Slideshow from '../Slideshow/Slideshow';
 
 export default function Housinginformation( { data } ) {
-    const { houseId }= useParams();
+    const { houseId } = useParams();
     console.log("ok", houseId);
   return (
 <div className="card-container">
@@ -13,7 +13,7 @@ export default function Housinginformation( { data } ) {
               <div className="card-info" key={index}>
                 {/* <h2>{house.title}</h2>
                 <p>{house.description}</p> */}
-                <Slideshow imagesList={ house.pictures } />
+                <Slideshow imageTitle = { house.title } imagesList={ house.pictures } />
               </div>
             ))}
         </div>  )
