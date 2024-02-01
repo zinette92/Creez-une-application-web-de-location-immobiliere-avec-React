@@ -117,17 +117,16 @@ code {
   margin-top: 25px;
   width: calc(100% - 50px);
 
+  @media (max-width: 600px){
+    margin-top: 10px;
+  }
   &__frame {
-    padding: 25px;
+    padding: 45px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: auto;
     grid-gap: 30px;
     justify-items: center;
-    // display: flex;
-    // flex-wrap: wrap;
-    // justify-content: space-around;
-    // align-items: flex-start;
     border-radius: 10px;
     background-color: #f6f6f6;
     @media (max-width: 600px) {
@@ -137,6 +136,8 @@ code {
       justify-content: space-around;
       flex-direction: column;
       align-items: center;
+      gap: 10px;
+      padding: 0;
     }
   }
 
@@ -150,7 +151,6 @@ code {
     @media (max-width: 600px) {
       width: 100%;
       height: 255px;
-      margin-top: 15px;
     }
     &--cover {
       width: 100%;
@@ -342,4 +342,10 @@ code {
       font-size: 0.7rem;
     }
   }
+}
+
+
+.hideImageIndex {
+  display: none;
+
 }

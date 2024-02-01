@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Logements from "../../Data/logements.json";
 
 export default function Card() {
@@ -7,10 +8,13 @@ export default function Card() {
       <div className="card__frame">
         {Logements.map((data) => (
           <div className="card__logement" key={data.id}>
+          <Link to={`/housing/${data.id}/`}>
+
             <img className="card__logement--cover" src={ data.cover } alt={ data.title }/> 
             <h3 className="card__logement--title">
               {data.title}
             </h3>
+            </Link>
           </div>
         ))}
       </div>
