@@ -1,13 +1,14 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import Slideshow from '../Slideshow/Slideshow';
+import Data from '../../Data/logements.json'
 
-export default function Housinginformation( { data } ) {
+export default function Housinginformation() {
     const { houseId } = useParams();
     console.log("ok", houseId);
   return (
 <div className="card-container">
-          {data
+          {Data
             .filter((house) => house.id === houseId)
             .map((house, index) => (
               <div className="card-info" key={index}>
