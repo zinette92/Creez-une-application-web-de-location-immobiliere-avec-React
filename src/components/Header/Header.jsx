@@ -12,11 +12,11 @@ export default function Header() {
           src={logo_kasa_header}
           alt="Logo de l'entreprise Kasa"
         />
-        <div>
-          <NavLink to="/" className="navbar__link">
+        <div className="navbar__link">
+          <NavLink to="/" className="navbar__link--style">
             Accueil
           </NavLink>
-          <NavLink to="/about" className="navbar__link">
+          <NavLink to="/about" className="navbar__link--style">
             A propos
           </NavLink>
         </div>
