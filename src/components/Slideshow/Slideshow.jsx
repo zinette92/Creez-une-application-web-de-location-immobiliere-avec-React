@@ -5,7 +5,7 @@ import prevImage from "../../assets/images/prev_carousel.png";
 
 export default function Slideshow({ imageTitle, imagesList }) {
   const [activeImageIndex, setActiveImageIndex] = useState(0);
-  console.log(activeImageIndex);
+
   return (
     <div className="carousel">
       <img

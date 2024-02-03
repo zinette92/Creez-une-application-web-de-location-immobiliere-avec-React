@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Home from "../../pages/Home/Home";
 import About from "../../pages/About/About";
 import Error from "../../pages/Error/Error";
@@ -13,6 +13,7 @@ export default function Router() {
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="housing/:houseId" element={<Housinginformation />} />
+          <Route path="/error" element={<Error />} />
           <Route path="*" element={<Error />} />
         </Route>
       </Routes>
