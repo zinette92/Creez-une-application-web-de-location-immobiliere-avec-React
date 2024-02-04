@@ -3,18 +3,17 @@ import { useParams, Navigate } from "react-router-dom";
 import Slideshow from "../Slideshow/Slideshow";
 import Data from "../../Data/logements.json";
 import Collapse from "../Collapse/Collapse";
-import StarFull from "../../assets/images/full_star.png";
-import StarEmpty from "../../assets/images/empty_star.png";
+import FullStar from "../../assets/images/full_star.png";
+import EmptyStar from "../../assets/images/empty_star.png";
 
 export default function Housinginformation() {
   const { houseId } = useParams();
   const houseData = Data.filter((house) => house.id === houseId);
   const maxRate = 5;
+
   if (houseData.length === 0) {
     return <Navigate to="/error" />;
   }
- 
-  
 
   return (
     <section className="house">
@@ -26,10 +25,12 @@ export default function Housinginformation() {
             key={index}
           />
 
-          <div className="flex__wrapper--horizontal">
+          <div className="flex__wrapper">
             <div className="house__details">
-              <h1 className="house__details--title"> {house.title} </h1>
-              <h4 className="house__details--location">{house.location}</h4>
+              <div>
+                <h1 className="house__details--title"> {house.title} </h1>
+                <p className="house__details--location">{house.location}</p>
+              </div>
               <ul className="house__details--tags">
                 {house.tags.map((tag, index) => (
                   <li key={index}>
@@ -49,18 +50,16 @@ export default function Housinginformation() {
                   alt="Host of this house"
                 />
               </div>
-              <ul className="house__owner--rate">
-              {[...Array(maxRate)].map((_, index) => (
-        <li>
-        <img
-          key={index}
-          className={index < house.rating ? 'star-filled' : 'star-empty'}
-          
-        />
-    
-        </li>
-      ))}
-
+              <ul className="house__host--rate">
+                {[...Array(maxRate)].map((_, index) => (
+                  <li>
+                    <img
+                      key={index}
+                      src={index < house.rating ? FullStar : EmptyStar}
+                      alt={index < house.rating ? "A full star" : "An empty star"}
+                    />
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
