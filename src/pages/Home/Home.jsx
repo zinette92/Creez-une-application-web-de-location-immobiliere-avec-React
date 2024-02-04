@@ -7,13 +7,23 @@ import Logements from "../../Data/logements.json";
 export default function Home() {
   return (
     <div className="home">
-      <Banner bannerImage={ banner_home_menu } bannerText={ "Chez vous, partout et ailleurs" } textBorder={ true } bannerShadow={ true }/>
+      <Banner
+        bannerImage={banner_home_menu}
+        bannerText={"Chez vous, partout et ailleurs"}
+        textBorder={true}
+        bannerShadow={true}
+      />
       <section className="card">
-      {Logements.map((data, index) => (
-          <Card cardId = { data.id } cardCover = { data.cover } cardTitle = {data.title} linkIndex = { index } key={ data.id }/>
+        {Logements.map((data, index) => (
+          <Card
+            cardId={data.id}
+            cardCover={data.cover}
+            cardTitle={data.title}
+            linkIndex={index}
+            key={data.id}
+          />
         ))}
-               
       </section>
-  </div>
+    </div>
   );
 }
