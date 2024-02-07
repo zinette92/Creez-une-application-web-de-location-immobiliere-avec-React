@@ -19,7 +19,7 @@ export default function Slideshow({ imageTitle, imagesList }) {
   };
 
   return (
-    <div className="carousel">
+    <section className="carousel">
       <img
         className="carousel__image"
         src={imagesList[activeImageIndex]}
@@ -46,6 +46,6 @@ export default function Slideshow({ imageTitle, imagesList }) {
           />
         </>
       )}
-    </div>
+    </section>
   );
 }

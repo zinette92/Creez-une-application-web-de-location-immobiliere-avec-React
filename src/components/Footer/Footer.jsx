@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="footer__content">
         <img
           className="footer__content--logo"
-          src={ logo_kasa_footer }
+          src={logo_kasa_footer}
           alt="Logo de l'entreprise kasa"
         />
         <small className="footer__content--copyright">

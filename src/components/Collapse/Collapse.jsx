@@ -12,7 +12,7 @@ export default function Collapse({ title, description, equipments }) {
   };
 
   return (
-    <div className="collapse">
+    <div className="collapse" onClick={setCollapseState}>
       <div className="collapse__header">
         <h3 className="collapse__header--title"> {title}</h3>
         <img
@@ -21,7 +21,6 @@ export default function Collapse({ title, description, equipments }) {
           }`}
           src={collapse_arrow}
           alt="Collapse arrow"
-          onClick={setCollapseState}
         />
       </div>
       <div
