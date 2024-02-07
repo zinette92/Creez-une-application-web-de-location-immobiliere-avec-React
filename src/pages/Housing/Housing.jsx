@@ -16,7 +16,7 @@ export default function Housing() {
   }
 
   return (
-    <section className="housing">
+    <div className="housing">
       {houseData.map((house, index) => (
         <React.Fragment key={index}>
           <Slideshow
@@ -25,7 +25,7 @@ export default function Housing() {
             key={index}
           />
 
-          <div className="flex__wrapper">
+          <section className="flex__wrapper">
             <div className="housing__details">
               <div>
                 <h1 className="housing__details--title"> {house.title} </h1>
@@ -64,13 +64,13 @@ export default function Housing() {
                 ))}
               </ul>
             </div>
-          </div>
-          <div className="housing__collapse">
+          </section>
+          <section className="housing__collapse">
             <Collapse title={"Description"} description={house.description} />
             <Collapse title={"Équipements"} equipments={house.equipments} />
-          </div>
+          </section>
         </React.Fragment>
       ))}
-    </section>
+    </div>
   );
 }
