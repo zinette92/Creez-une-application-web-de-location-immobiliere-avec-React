@@ -638,6 +638,11 @@ code {
     bottom: 5%;
     left: 50%;
     transform: translateX(-50%);
+
+    @media (max-width: 767.98px) {
+      bottom: 2%;
+      font-size: 1rem;
+    }
   }
 
   &__arrow--left {

@@ -9,7 +9,7 @@ export default function Home() {
     <div className="home">
       <Banner
         bannerImage={banner_home_menu}
-        bannerText={"Chez vous, partout et ailleurs"}
+        bannerText="Chez vous, partout et ailleurs"
         textBorder={true}
         bannerShadow={true}
       />
@@ -19,8 +19,7 @@ export default function Home() {
             cardId={data.id}
             cardCover={data.cover}
             cardTitle={data.title}
-            linkIndex={index}
-            key={data.id}
+            key={index}
           />
         ))}
       </section>
