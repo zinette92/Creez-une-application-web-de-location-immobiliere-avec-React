@@ -19,11 +19,7 @@ export default function Housing() {
     <div className="housing">
       {houseData.map((house, index) => (
         <React.Fragment key={index}>
-          <Slideshow
-            imageTitle={house.title}
-            imagesList={house.pictures}
-            key={index}
-          />
+          <Slideshow imageTitle={house.title} imagesList={house.pictures} />
 
           <section className="flex__wrapper">
             <div className="housing__details">
@@ -56,9 +52,7 @@ export default function Housing() {
                     <img
                       key={index}
                       src={index < house.rating ? FullStar : EmptyStar}
-                      alt={
-                        index < house.rating ? "A full star" : "An empty star"
-                      }
+                      alt={index < house.rating ? "A full star" : "An empty star"}
                     />
                   </li>
                 ))}
@@ -66,8 +60,8 @@ export default function Housing() {
             </div>
           </section>
           <section className="housing__collapse">
-            <Collapse title={"Description"} description={house.description} />
-            <Collapse title={"Équipements"} equipments={house.equipments} />
+            <Collapse title="Description" description={house.description} />
+            <Collapse title="Équipements" equipments={house.equipments} />
           </section>
         </React.Fragment>
       ))}
