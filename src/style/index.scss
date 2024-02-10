@@ -531,7 +531,6 @@ code {
 .collapse {
   display: flex;
   flex-direction: column;
-  cursor: pointer;
   gap: 0;
 
   &__open {
@@ -552,6 +551,7 @@ code {
     background-color: #ff6060;
     border-radius: 10px;
     z-index: 1;
+    cursor: pointer;
 
     @media (max-width: 767.98px) {
       height: 40px;
@@ -650,7 +650,6 @@ code {
     top: 50%;
     left: 5%;
     transform: translate(-50%, -50%);
-    cursor: pointer;
 
     @media (max-width: 1024px) {
       width: 25px;
@@ -668,7 +667,6 @@ code {
     top: 50%;
     right: 5%;
     transform: translate(50%, -50%);
-    cursor: pointer;
     @media (max-width: 1024px) {
       width: 25px;
       height: auto;
