@@ -1,26 +1,23 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React from "react";
 
-export default function Banner({
-  bannerImage,
-  bannerText,
-  bannerShadow,
-  textBorder,
-}) {
+export default function Banner(props) {
   return (
     <section className="banner">
       <img
         className={`banner__image ${
-          bannerShadow ? "banner__image--shadow" : ""
+          props.bannerShadow ? "banner__image--shadow" : ""
         } `}
-        src={bannerImage}
+        src={props.bannerImage}
         alt="Image de bannière"
       />
-      {bannerText && (
+      {props.bannerText && (
         <h1
-          className={`banner__text ${textBorder ? "banner__text--border" : ""}`}
+          className={`banner__text ${
+            props.textBorder ? "banner__text--border" : ""
+          }`}
         >
-          {bannerText}
+          {props.bannerText}
         </h1>
       )}
     </section>

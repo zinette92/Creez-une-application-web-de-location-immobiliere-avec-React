@@ -349,13 +349,12 @@ code {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    margin: 15px 0;
-    gap: 30px;
+    margin: 20px 0;
+    gap: 40px;
 
     @media (max-width: 1024px) {
       justify-content: center;
       min-height: 30vh;
-      gap: 30px;
     }
 
     @media (max-width: 767.98px) {

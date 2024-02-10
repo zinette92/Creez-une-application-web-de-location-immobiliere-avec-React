@@ -1,6 +1,6 @@
 import { React, useState } from "react";
 import collapse_arrow from "../../assets/images/toggle_arrow.png";
-export default function Collapse({ title, description, equipments }) {
+export default function Collapse(props) {
   const [isCollapseOpen, setIsCollapseOpen] = useState(false);
 
   const setCollapseState = () => {
@@ -14,7 +14,7 @@ export default function Collapse({ title, description, equipments }) {
   return (
     <div className="collapse" onClick={setCollapseState}>
       <div className="collapse__header">
-        <h3 className="collapse__header--title"> {title}</h3>
+        <h3 className="collapse__header--title"> {props.title}</h3>
         <img
           className={`collapse__header--toggle ${
             isCollapseOpen ? "collapse__open" : "collapse__close"
@@ -30,7 +30,7 @@ export default function Collapse({ title, description, equipments }) {
             : "collapse__content--close"
         }`}
       >
-        {description ? (
+        {props.description ? (
           <p
             className={`collapse__content--description ${
               isCollapseOpen
@@ -38,7 +38,7 @@ export default function Collapse({ title, description, equipments }) {
                 : "collapse__content--Close"
             }`}
           >
-            {description}
+            {props.description}
           </p>
         ) : (
           <ul
@@ -48,7 +48,7 @@ export default function Collapse({ title, description, equipments }) {
                 : "collapse__content--Close"
             }`}
           >
-            {equipments.map((equipment, index) => (
+            {props.equipments.map((equipment, index) => (
               <li key={index}> {equipment} </li>
             ))}
           </ul>
