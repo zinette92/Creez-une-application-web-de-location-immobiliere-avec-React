@@ -1,10 +1,19 @@
+/* Variables */
+
 $link-text-color: black;
 $error-text-color: #ff6060;
 $footer-background-color: black;
 $footer-text-color: white;
 
+/* Mixins */
+
+@mixin banner-shadow {
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.5);
+}
+
 body {
   margin: 0;
+  caret-color: transparent;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -12,6 +21,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+header,
 main {
   max-width: 1300px;
   width: calc(100% - 100px);
@@ -34,12 +44,16 @@ code {
     monospace;
 }
 
+/* Home page */
+
 .home {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
 }
+
+/* Error page */
 
 .error {
   height: 60vh;
@@ -91,9 +105,12 @@ code {
   }
 }
 
+/* Housing page */
+
 .housing {
   display: flex;
   flex-direction: column;
+
   &__details {
     display: flex;
     flex-direction: column;
@@ -255,6 +272,7 @@ code {
 
   &__collapse {
     width: 100%;
+    height: fit-content;
     display: flex;
     justify-content: space-between;
     gap: 50px;
@@ -285,7 +303,7 @@ code {
       > .collapse__header {
         > h3 {
           @media (max-width: 767.98px) {
-            font-size: 0.8rem;
+            font-size: 0.9rem;
           }
         }
 
@@ -298,11 +316,13 @@ code {
       }
 
       > .collapse__content {
-        height: fit-content;
+        height: 100%;
       }
     }
   }
 }
+
+/* Flex wrapper for housing details */
 
 .flex__wrapper {
   display: flex;
@@ -315,6 +335,8 @@ code {
     gap: 20px;
   }
 }
+
+/* About page */
 
 .about {
   display: flex;
@@ -338,21 +360,12 @@ code {
 
     @media (max-width: 767.98px) {
       width: 100%;
-      min-height: 30vh;
+      font-size: 0.8rem;
     }
   }
 }
 
-.header {
-  width: calc(100% - 100px);
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1300px;
-
-  @media (max-width: 767.98px) {
-    width: 90%;
-  }
-}
+/* Navbar */
 
 .navbar {
   display: flex;
@@ -396,6 +409,8 @@ code {
   }
 }
 
+/* Banner component */
+
 .banner {
   width: 100%;
   margin-left: auto;
@@ -419,7 +434,7 @@ code {
 
     &--shadow {
       @media (min-width: 767.99px) {
-        box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.5);
+        @include banner-shadow;
       }
     }
   }
@@ -449,12 +464,13 @@ code {
 
     &--border {
       @media (min-width: 767.99px) {
-        text-shadow: 2 2 3px black;
         -webkit-text-stroke: 1px black;
       }
     }
   }
 }
+
+/* Card component */
 
 .card {
   margin-top: 25px;
@@ -510,6 +526,8 @@ code {
     }
   }
 }
+
+/* Collapse component */
 
 .collapse {
   display: flex;
@@ -594,6 +612,8 @@ code {
   }
 }
 
+/* Slideshow component */
+
 .carousel {
   position: relative;
   &__image {
@@ -626,6 +646,7 @@ code {
     top: 50%;
     left: 5%;
     transform: translate(-50%, -50%);
+    cursor: pointer;
 
     @media (max-width: 1024px) {
       width: 25px;
@@ -643,7 +664,7 @@ code {
     top: 50%;
     right: 5%;
     transform: translate(50%, -50%);
-
+    cursor: pointer;
     @media (max-width: 1024px) {
       width: 25px;
       height: auto;
@@ -655,6 +676,8 @@ code {
     }
   }
 }
+
+/* Footer component */
 
 .footer {
   width: 100%;

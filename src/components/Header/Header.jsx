@@ -7,11 +7,13 @@ export default function Header() {
   return (
     <header className="header">
       <nav className="navbar">
-        <img
-          className="navbar__logo"
-          src={logo_kasa_header}
-          alt="Logo de l'entreprise Kasa"
-        />
+        <NavLink to="/">
+          <img
+            className="navbar__logo"
+            src={logo_kasa_header}
+            alt="Logo de l'entreprise Kasa"
+          />
+        </NavLink>
         <ul className="navbar__link">
           <li>
             <NavLink to="/" className="navbar__link--style">
